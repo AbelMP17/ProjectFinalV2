@@ -1,0 +1,55 @@
+/* Define keyframes for the animation */
+@keyframes imgLoop {
+  0% {
+    background-image: url("/src/assets/fitness.jpg");
+  }
+  35% {
+    background-image: url("/src/assets/finanzas.jpg");
+  }
+  75% {
+    background-image: url("/src/assets/libreria.jpg");
+  }
+  100% {
+    background-image: url("/src/assets/fitness.jpg");
+  }
+}
+
+/* Apply animation to an element */
+.imagenesLoop {
+  animation: imgLoop 20s infinite; /* Play the colorLoop animation for 5 seconds, infinitely */
+  background-size: cover;
+}
+
+.slide-in-left {
+  animation: slideInLeft 1.5s forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 1.5s forwards;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
